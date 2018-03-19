@@ -36,7 +36,7 @@ interface ContractReceiver {
 // - https://www.ethereum.org/token (uncontrolled, non-standard)
 // - https://github.com/Dexaran/ERC23-tokens/blob/Recommended/ERC223_Token.sol
 
-contract BitEther is owned
+contract HashBux is owned
 {
   string  public name;        // ERC20
   string  public symbol;      // ERC20
@@ -69,7 +69,7 @@ contract BitEther is owned
     symbol = "HASH";
   }
 
-  // BitEther-specific
+  // HashBux-specific
   function mine( uint256 newTokens ) public onlyOwner {
     if (newTokens + totalSupply > 4e9)
       revert();
